@@ -2,32 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Darkline</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Navbar -->
- <nav>
-  <h1>DARKLINE</h1>
-  <ul>
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#events-container">Events</a></li>
-    <li><a href="#team-container">Team</a></li>
-    <li><a href="#tickets-section">Tickets</a></li>
-  </ul>
-</nav>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DARKLINE</title>
 
-  <!-- Hero Section -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+    }
+
+    /* NAVBAR */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #111;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    .hero button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      background: #00bcd4;
+      color: black;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .hero button:hover {
+      background: #0097a7;
+    }
+
+    /* PREVIEW EVENTS (same format as events page) */
+    .preview {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      margin: 15px auto;
+      border-radius: 10px;
+      max-width: 400px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <h1>DARKLINE</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contacts</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
   <section class="hero">
-    <h2>Welcome to Darkline </h2>
-    <p>The ultimate nightout experience</p>
+    <h2>Welcome to DARKLINE</h2>
+    <p>The ultimate nightlife experience. Book your tickets now.</p>
+    <button onclick="window.location.href='events.html'">
+      View Events
+    </button>
   </section>
 
-  <!-- Containers for dynamic content -->
-  <section id="events-container"></section>
-  <section id="team-container"></section>
+  <!-- EVENTS PREVIEW -->
+  <section class="preview">
+    <h2>Upcoming Events</h2>
+    <div id="events-container"></div>
+  </section>
 
-  <!-- JS -->
-  <script src="script.js"></script>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Darkline</p>
+  </footer>
+
+  <!-- SAME SCRIPT -->
+<script src="server.js"></script>
 </body>
 </html>
